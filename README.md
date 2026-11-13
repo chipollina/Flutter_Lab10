@@ -10,10 +10,15 @@
 | ![Главный экран](img/main_screen.png) | ![Результат](img/win.png) | ![Нет монет](img/no_coins.png) |
 - Запуск:
 git clone https://github.com/chipollina/Flutter_Lab10.git
+
 cd slot_machine_domracheva
+
 `flutter pub get `
+
 Запустить в браузере (Web) `flutter run -d chrome` 
+
 Запустить на Android `flutter run -d ID_устройства`.
+
 - Звук включается отдельной кнопкой; до её нажатия приложение молчит.
 - Сборка Android: `flutter build apk --release`.
 - Готовый файл: `build/app/outputs/flutter-apk/app-release.apk`.
