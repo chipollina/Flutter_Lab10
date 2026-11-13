@@ -1,23 +1,33 @@
-# Лабораторная работа №9. Flutter: StatefulWidget и управление состоянием
-**ФИ: Домрачевой Полины**
+# Лабораторная работа №10. Слот-машина
+Автор: Домрачева Полина 
 
-**Группа: ИСП-241**
+Группа: ИСП-241 
 
-**Дата сдачи: 04.11.26**
+Дата: 13.11.2026
 
-## Что изучила
-- Как работает `StatefulWidget` изнутри: зачем нужен отдельный класс `State` и как через `setState()` обновлять экран (монеты, картинки, сообщения).
-- Блокировка UI во время асинхронных операций: Изучено, как временно отключать интерактивные элементы (кнопки), передавая null в их обработчик onPressed на время выполнения анимации или загрузки.
-- Создание плавных анимаций интерфейса с помощью `AnimatedOpacity` и `AnimatedSwitcher`.
-- Игровая асинхронность: с помощью `Future.delayed` и `Future.wait` сделали так, чтобы три барабана крутились вместе, но останавливались по очереди с разной скоростью.
+| Главный экран | Результат | Монеты закончились |
+| --- | --- | --- |
+| ![Главный экран](img/main_screen.png) | ![Результат](img/win.png) | ![Нет монет](img/no_coins.png) |
+- Запуск:
+git clone https://github.com/chipollina/Flutter_Lab10.git
+cd slot_machine_domracheva
+`flutter pub get `
+Запустить в браузере (Web) `flutter run -d chrome` 
+Запустить на Android `flutter run -d ID_устройства`.
+- Звук включается отдельной кнопкой; до её нажатия приложение молчит.
+- Сборка Android: `flutter build apk --release`.
+- Готовый файл: `build/app/outputs/flutter-apk/app-release.apk`.
+- APK: [Ссылка на файл в GitHub Releases](https://github.com/chipollina/Flutter_Lab10/releases/download/v1.0/app-release.apk)
+- Проверенные Flutter/Dart:Flutter 3.47.9 Dart 3.13.7.
+- Изучено: 
+1. Состояние и анимация (`StatefulWidget`, `setState()`, `AnimatedOpacity`, `AnimatedSwitcher`).
 
-## Скриншот финального приложения
+2. Работа с локальными ресурсами (изображения и звуки через `pubspec.yaml`).
 
-![Слот-машина](img/step4_domracheva.png)
+3. Аудиофокус и жизненный цикл приложения (остановка музыки при сворачивании, `WidgetsBindingObserver`).
 
-## Инструкция по запуску
+4. Освобождение ресурсов (корректный `dispose()` для плееров).
 
-1. git clone https://github.com/chipollina/Flutter_Lab9.git
-2. cd Flutter_Lab9
-3. flutter pub get
-4. flutter run -d chrome
+5. Настройка иконок приложения (`flutter_launcher_icons`).
+
+6. Сборка release-версий для Web и Android (APK).
